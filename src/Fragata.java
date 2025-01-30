@@ -1,3 +1,6 @@
-public class Fragata extends Nau{
+public class Fragata extends Nave {
+	public Fragata() {
+		super("Fragata");
+	}
 
 }

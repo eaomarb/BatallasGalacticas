@@ -1,3 +1,5 @@
-public class MadreComandante extends Nau{
-
+public class MadreComandante extends Nave {
+	public MadreComandante() {
+		super("Madre Comandante");
+	}
 }

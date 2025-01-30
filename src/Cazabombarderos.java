@@ -1,3 +1,6 @@
-public class Cazabombarderos extends Nau{
+public class Cazabombarderos extends Nave {
+	public Cazabombarderos() {
+		super("Cazabombarderos");
+	}
 
 }
