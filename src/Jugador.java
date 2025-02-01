@@ -7,6 +7,12 @@ public class Jugador {
 	private int columnaOrigen;
 	private int columnaDestino;
 
+	private String equipo;
+
+	public Jugador(String equipo) {
+		this.equipo = equipo;
+	}
+
 	public int getFilaOrigen() {
 		return filaOrigen;
 	}
@@ -68,7 +74,7 @@ public class Jugador {
 
 		return columna;
 	}
-	
+
 	public void preguntarPosicion() {
 		Scanner scanner = new Scanner(System.in);
 
