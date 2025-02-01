@@ -8,8 +8,8 @@ public class BatalletesGalactiques {
 		
 		SectorGalactic sectorGalactic = new SectorGalactic();
 		
-		sectorGalactic.mostrarTablero();
-		sectorGalactic.preguntarPosicion();
+		//sectorGalactic.mostrarTablero(tablero);
+		sectorGalactic.instanciarNaves(tablero);
 
 	}
 
