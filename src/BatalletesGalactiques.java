@@ -7,6 +7,7 @@ public class BatalletesGalactiques {
 				{ 'D', 'F', 'E', '.', '.', 'E', 'F', 'D' }, { 'C', 'D', 'D', 'E', 'F', 'M', 'F', 'D' } };
 		
 		SectorGalactic sectorGalactic = new SectorGalactic();
+		Jugador jugador1 = new Jugador();
 		
 		//sectorGalactic.mostrarTablero(tablero);
 		sectorGalactic.instanciarNaves(tablero);
