@@ -2,17 +2,6 @@ import java.util.Scanner;
 
 public class Jugador {
 	private int filaOrigen;
-	private int filaDestino;
-
-	private int columnaOrigen;
-	private int columnaDestino;
-
-	private String equipo;
-
-	public Jugador(String equipo) {
-		this.equipo = equipo;
-	}
-
 	public int getFilaOrigen() {
 		return filaOrigen;
 	}
@@ -28,6 +17,11 @@ public class Jugador {
 	public int getColumnaDestino() {
 		return columnaDestino;
 	}
+
+	private int filaDestino;
+
+	private int columnaOrigen;
+	private int columnaDestino;
 
 	public void mostrarTablero(char[][] tablero) {
 		for (int i = 0; i < tablero.length; i++) {
@@ -74,7 +68,7 @@ public class Jugador {
 
 		return columna;
 	}
-
+	
 	public void preguntarPosicion() {
 		Scanner scanner = new Scanner(System.in);
 

@@ -1,6 +1,6 @@
 public class DronesCombate extends Nave {
 
-	public DronesCombate(char letra, char equipo, int x, int y) {
-		super(letra, equipo, x, y);
+	public DronesCombate(char equipo) {
+		super(equipo);
 	}
 }

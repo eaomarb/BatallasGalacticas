@@ -1,11 +1,11 @@
+import java.util.ArrayList;
+
 public class SectorGalactic {
-	public void instanciarNaves(char[][] tablero) {
-		TableroInicial tableroInicial = new TableroInicial();
-				
-		if (tableroInicial.comprobarTableroInicial(tablero)) {
-			
-		}
+	TableroInicial tableroInicial = new TableroInicial();
+	BatalletesGalactiques batalletesGalactiques = new BatalletesGalactiques();
 
+	char[][] tablero = batalletesGalactiques.getTablero();
 
-	}
+	ArrayList<Nave> navesAlfa = tableroInicial.instanciarNavesAlfa(tablero);
+
 }

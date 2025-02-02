@@ -1,8 +1,14 @@
+import java.util.ArrayList;
+
 public class TableroInicial {
 	private boolean existeMadreComandanteAlfa = false;
 	private boolean existeMadreComandanteBeta = false;
+	
+	public TableroInicial() {
+		
+	}
 
-	public boolean comprobarTableroInicial(char[][] tablero) {
+	private boolean comprobarTableroInicial(char[][] tablero) {
 		char[][] tableroInvertido = new char[8][8];
 		boolean tableroCorrecto = true;
 
@@ -72,7 +78,7 @@ public class TableroInicial {
 		if (!existeMadreComandanteAlfa) {
 			System.out.println("Falta la nave Madre Comandante en el equipo Alfa");
 		}
-		
+
 		if (!existeMadreComandanteBeta) {
 			System.out.println("Falta la nave Madre Comandante en el equipo Beta");
 		}
@@ -85,5 +91,63 @@ public class TableroInicial {
 		}
 
 		return tableroCorrecto;
+	}
+
+	public ArrayList<Nave> instanciarNavesAlfa(char[][] tablero) {
+		ArrayList<Nave> naves = new ArrayList<>();
+		for (int i = 6; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				if (comprobarTableroInicial(tablero)) {
+					switch (tablero[i][j]) {
+					case 'C':
+						naves.add(new Cazabombarderos('a'));
+						break;
+					case 'D':
+						naves.add(new DronesCombate('a'));
+						break;
+					case 'E':
+						naves.add(new Exploradora('a'));
+						break;
+					case 'F':
+						naves.add(new Fragata('a'));
+						break;
+					case 'M':
+						naves.add(new MadreComandante('a'));
+						break;
+					}
+				}
+			}
+		}
+
+		return naves;
+	}
+
+	public ArrayList<Nave> instanciarNavesBeta(char[][] tablero) {
+		ArrayList<Nave> naves = new ArrayList<>();
+		for (int i = 0; i < 1; i++) {
+			for (int j = 0; j < 8; j++) {
+				if (comprobarTableroInicial(tablero)) {
+					switch (tablero[i][j]) {
+					case 'C':
+						naves.add(new Cazabombarderos('b'));
+						break;
+					case 'D':
+						naves.add(new DronesCombate('b'));
+						break;
+					case 'E':
+						naves.add(new Exploradora('b'));
+						break;
+					case 'F':
+						naves.add(new Fragata('b'));
+						break;
+					case 'M':
+						naves.add(new MadreComandante('b'));
+						break;
+					}
+				}
+			}
+		}
+
+		return naves;
 	}
 }

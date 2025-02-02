@@ -1,13 +1,15 @@
 public abstract class Nave {
-	char letra;
-	char equipo;
-	int x;
-	int y;
+	private char equipo;
 
-	public Nave(char letra, char equipo, int x, int y) {
-		this.letra = letra;
+	/**
+	 * 
+	 * @param equipo 'a' para el equipo alfa y 'b' para el equipo beta
+	 */
+	public Nave(char equipo) {
 		this.equipo = equipo;
-		this.x = x;
-		this.y = y;
+	}
+
+	public void mover() {
+
 	}
 }
