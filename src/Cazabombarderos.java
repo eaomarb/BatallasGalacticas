@@ -1,6 +1,6 @@
 public class Cazabombarderos extends Nave {
 
-	public Cazabombarderos(char equipo) {
-		super(equipo);
-	}
+    public Cazabombarderos(char equipo) {
+        super(equipo);
+    }
 }

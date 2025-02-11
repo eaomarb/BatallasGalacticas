@@ -1,25 +1,19 @@
 public class BatalletesGalactiques {
-	private char[][] tablero = { { 'c', 'd', 'd', 'e', 'f', 'm', 'f', 'd' }, { 'd', 'f', 'e', '.', '.', 'e', 'f', 'd' },
-			{ '.', '.', '.', '.', '.', '.', '.', '.' }, { '.', '.', '.', '.', '.', '.', '.', '.' },
-			{ '.', '.', '.', '.', '.', '.', '.', '.' }, { '.', '.', '.', '.', '.', '.', '.', '.' },
-			{ 'D', 'F', 'E', '.', '.', 'E', 'F', 'D' }, { 'C', 'D', 'D', 'E', 'F', 'M', 'F', 'D' } };
+    public static void main(String[] args) {
+        boolean partidaAcabada = false;
 
-	public char[][] getTablero() {
-		return tablero;
-	}
+        SectorGalactic sectorGalactic = new SectorGalactic();
 
-	public void setTablero(char[][] tablero) {
-		this.tablero = tablero;
-	}
+        Jugador jugadorAlfa = new Jugador('a');
+        Jugador jugadorBeta = new Jugador('b');
 
-	public static void main(String[] args) {
+        while (!partidaAcabada) {
+            sectorGalactic.mostrarTablero();
+            System.out.println("Turno equipo Alfa:");
+            jugadorAlfa.preguntarPosicion();
+            System.out.println("Turno equipo Beta:");
+            jugadorBeta.preguntarPosicion();
 
-		SectorGalactic sectorGalactic = new SectorGalactic();
-		TableroInicial tableroInicial = new TableroInicial();
-
-		Jugador jugadorAlfa = new Jugador();
-		Jugador jugadorBeta = new Jugador();
-
-	}
-
+        }
+    }
 }
