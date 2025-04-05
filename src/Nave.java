@@ -1,14 +1,21 @@
 public abstract class Nave {
-    private char equipo;
+    private final char equipo;
+    private final boolean puedeAtacar;
 
-    /**
-     * @param equipo 'a' para el equipo alfa y 'b' para el equipo beta
-     */
-    public Nave(char equipo) {
-        this.equipo = equipo;
+    public abstract boolean movimientoValido(int filaOrigen, int columnaOrigen,
+                                             int filaDestino, int columnaDestino,
+                                             char[][] tablero);
+
+    public char getEquipo() {
+        return equipo;
     }
 
-    public void mover() {
+    public boolean puedeAtacar() {
+        return puedeAtacar;
+    }
 
+    public Nave(char equipo, boolean puedeAtacar) {
+        this.equipo = equipo;
+        this.puedeAtacar = puedeAtacar;
     }
 }

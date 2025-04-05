@@ -1,25 +1,16 @@
-import java.util.ArrayList;
-
 public class TableroInicial {
     private boolean existeMadreComandanteAlfa = false;
     private boolean existeMadreComandanteBeta = false;
 
-    public TableroInicial() {
-    }
-
     /**
      * Este metodo comprueba que el tablero inicial sea valido.
      *
-     * @param tablero
+     * @param tablero tablero
      * @return true si es valido, de lo contrario, false
      */
-    private boolean comprobarTableroInicial(char[][] tablero) {
+    public boolean comprobarTableroInicial(char[][] tablero) {
         char[][] tableroInvertido = new char[8][8];
-        boolean tableroCorrecto = true;
-
-        if (tablero.length != 8 || tablero[0].length != 8) {
-            tableroCorrecto = false;
-        }
+        boolean tableroCorrecto = tablero.length == 8 && tablero[0].length == 8;
 
         // Revisar que las filas 3-6 esten vacias
         for (int i = 2; i < 5; i++) {
@@ -96,80 +87,5 @@ public class TableroInicial {
         }
 
         return tableroCorrecto;
-    }
-
-    /**
-     * Este metodo recorre las 2 filas del equipo Alfa y comprueba que las naves sean validas.
-     * Si son validas se añaden al array
-     *
-     * @param tablero
-     * @return ArrayList con las naves del equipo alfa
-     */
-    public ArrayList<Nave> instanciarNavesAlfa(char[][] tablero) {
-        ArrayList<Nave> naves = new ArrayList<>();
-
-        if (comprobarTableroInicial(tablero)) {
-            for (int i = 6; i < 8; i++) {
-                for (int j = 0; j < 8; j++) {
-                    switch (tablero[i][j]) {
-                        case 'C':
-                            naves.add(new Cazabombarderos('a'));
-                            break;
-                        case 'D':
-                            naves.add(new DronesCombate('a'));
-                            break;
-                        case 'E':
-                            naves.add(new Exploradora('a'));
-                            break;
-                        case 'F':
-                            naves.add(new Fragata('a'));
-                            break;
-                        case 'M':
-                            naves.add(new MadreComandante('a'));
-                            break;
-                    }
-                }
-            }
-        }
-
-        return naves;
-    }
-
-    /**
-     * Este metodo recorre las 2 filas del equipo Beta y comprueba que las naves sean validas.
-     * Si son validas se añaden al array
-     *
-     * @param tablero
-     * @return ArrayList con las naves del equipo Beta
-     */
-    public ArrayList<Nave> instanciarNavesBeta(char[][] tablero) {
-        ArrayList<Nave> naves = new ArrayList<>();
-
-        if (comprobarTableroInicial(tablero)) {
-            for (int i = 0; i < 2; i++) {
-                for (int j = 0; j < 8; j++) {
-                    switch (tablero[i][j]) {
-                        case 'C':
-                            naves.add(new Cazabombarderos('b'));
-                            break;
-                        case 'D':
-                            naves.add(new DronesCombate('b'));
-                            break;
-                        case 'E':
-                            naves.add(new Exploradora('b'));
-                            break;
-                        case 'F':
-                            naves.add(new Fragata('b'));
-                            break;
-                        case 'M':
-                            naves.add(new MadreComandante('b'));
-                            break;
-                    }
-                }
-
-            }
-        }
-
-        return naves;
     }
 }
