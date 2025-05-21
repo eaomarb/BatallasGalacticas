@@ -1,32 +1,44 @@
-# 🚀 Batallas Galácticas
+# Batallas Galácticas
 
-Proyecto del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM). Se trata de un juego por turnos en consola donde dos equipos (Alfa y Beta) mueven diferentes tipos de naves en un tablero 8x8, con el objetivo de destruir la nave "Madre Comandante" del rival.
+## Índice
+1. [Descripción](#descripción)  
+2. [Tecnologías](#tecnologías)  
+3. [Requisitos](#requisitos)  
+4. [Ejecución](#ejecución)  
+5. [Cómo jugar](#cómo-jugar)
 
-## 🎮 Cómo funciona
+---
 
-- Juego en consola por turnos.
-- Tablero validado y simétrico.
-- Cada nave tiene un comportamiento único (movimiento y si puede atacar o no).
-- Gana quien elimina la nave "Madre Comandante" del otro equipo.
+## Descripción
+Proyecto del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM). Juego de batallas galácticas por turnos en consola: diriges dos equipos (Alfa y Beta) sobre un tablero de 8×8 moviendo naves con patrones de ataque y alcance distintos para destruir la “Madre Comandante” rival. Con él consolidé mis conocimientos de POO en Java, herencia, polimorfismo y validación de entradas por teclado.
 
-## ✨ Naves disponibles
+---
 
-| Nave              | Símbolo | Ataca | Movimiento                          |
-|-------------------|---------|-------|-------------------------------------|
-| Madre Comandante  | M / m   | Sí    | 1 casilla en cualquier dirección    |
-| Fragata           | F / f   | Sí    | Recto, hasta 2 casillas             |
-| Cazabombardero    | C / c   | Sí    | En L (tipo caballo en ajedrez)      |
-| Exploradora       | E / e   | No    | Diagonal libre sin obstáculos       |
-| Dron de combate   | D / d   | Sí    | Avanza recto o ataca en diagonal    |
+## Tecnologías
+- Java
 
-## ℹ️ Sobre el proyecto
+---
 
-Proyecto 100% en Java, usando POO y validación de entradas. Me sirvió para practicar diseño de clases, herencia y lógica de juego por turnos. Pensado como reto personal para aplicar lo aprendido en DAM.
+## Requisitos
+- JDK 14 o superior 
 
-## ▶️ Cómo ejecutar
+---
 
-```bash
-git clone https://github.com/eaomarb/BatallasGalacticas.git
-cd BatallasGalacticas
-javac *.java
-java BatalletesGalactiques.java´´´´´
+## Ejecución
+    git clone https://github.com/eaomarb/BatallasGalacticas.git
+    cd BatallasGalacticas-master/src
+    javac *.java
+    java BatalletesGalactiques
+
+---
+
+## Cómo jugar
+- Cada turno alterna entre Equipo Alfa y Equipo Beta.  
+- Elige la nave y la casilla a la que quieres moverla; si está en rango de ataque, puedes eliminar una nave enemiga.  
+- Naves disponibles:  
+    - **Madre Comandante (M/m)**: mueve 1 casilla en cualquier dirección y ataca.  
+    - **Fragata (F/f)**: recto hasta 2 casillas y ataca.  
+    - **Cazabombardero (C/c)**: en “L” (como el caballo de ajedrez) y ataca.  
+    - **Exploradora (E/e)**: diagonal libre (no ataca).  
+    - **Dron (D/d)**: avanza recto o ataca en diagonal.  
+- Gana el equipo que destruye la Madre Comandante enemiga.  
