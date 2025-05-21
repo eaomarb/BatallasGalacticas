@@ -26,7 +26,7 @@ Proyecto del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM). Juego de
 
 ## Ejecución
     git clone https://github.com/eaomarb/BatallasGalacticas.git
-    cd BatallasGalacticas-master/src
+    cd BatallasGalacticas/src
     javac *.java
     java BatalletesGalactiques
 
